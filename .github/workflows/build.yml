@@ -14,11 +14,10 @@ jobs:
       matrix:
         target: [dev, stage, prod]
     runs-on: ubuntu-latest
-    if: ${{ inputs.target }} = ${{ matrix.target }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       
       - name: Build project for ${{ inputs.target }}
-        run: |
-          echo "Start to project for ${{ inputs.target }}."
+        if: ${{ inputs.target }} = ${{ matrix.target }}
+        run: echo "Start to project for ${{ inputs.target }}."
