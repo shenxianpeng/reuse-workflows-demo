@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Build ${{ inputs.target }} 
+      - name: Build project for {{ inputs.target }}
+        if: ${{ inputs.target }} = ${{ matrix.target }}
         run: |
-          # Add your build commands here
-          echo "Building the project for ${{ inputs.target }}."
+          echo "Start to project for {{ inputs.target }}."
