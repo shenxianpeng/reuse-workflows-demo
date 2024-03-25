@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        if: ${{ inputs.target }} == ${{ matrix.target }}
+        if: inputs.target == ${{ matrix.target }}
         uses: actions/checkout@v4
       
       - name: Build project for ${{ inputs.target }}
