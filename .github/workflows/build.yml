@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Build project
+      - name: Build ${{ inputs.target }} 
         run: |
           # Add your build commands here
-          echo "Building the project for {{ inputs.target }}."
+          echo "Building the project for ${{ inputs.target }}."
