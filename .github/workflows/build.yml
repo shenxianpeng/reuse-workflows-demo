@@ -20,5 +20,5 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Build project for ${{ inputs.target }}
-        if: ${{ inputs.target }} == ${{ matrix.target }}
+        if: inputs.target == ${{ matrix.target }}
         run: echo "Start to project for ${{ inputs.target }}."
