@@ -21,4 +21,4 @@ jobs:
       - name: Build project
         run: |
           # Add your build commands here
-          echo "Building the project..."
+          echo "Building the project for {{ inputs.target }}."
